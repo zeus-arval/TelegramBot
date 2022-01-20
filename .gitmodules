@@ -1,0 +1,3 @@
+[submodule "TelegramBotConfig"]
+	path = TelegramBotConfig
+	url = git@github.com:zeus-arval/TelegramBotConfig.git
