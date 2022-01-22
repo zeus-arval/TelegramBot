@@ -1,8 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Service.Common;
-using System;
-using System.Threading.Tasks;
 
 namespace TelegramBotTestProject
 {
@@ -10,17 +8,15 @@ namespace TelegramBotTestProject
     {
         static void Main(string[] args)
         {
-            using IHost host = CreateHostBuilder(args).Build();
-            host.Start();
+            IServiceCollection services = new ServiceCollection();
+
 
 
         }
 
-        static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-            .ConfigureServices(
-                (_, services) =>
-                    services.AddTransient<IService>()
-                );
+        static void ConfigureServices(IServiceCollection services)
+        {
+            services.AddTransient<IService>();    
+        }
     }
 }
