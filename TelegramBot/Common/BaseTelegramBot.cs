@@ -8,7 +8,7 @@ namespace TelegramBot.Common
         internal protected string GetToken 
         {
             get => _token;
-            init => _token = ConfigurationManager.AppSettings.Get("token");
+            init => _token = ConfigurationManager.AppSettings.Get("telegram_token");
         }
         public abstract void Update();
     }
